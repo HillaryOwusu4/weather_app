@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/x-icon" href="image/storm.png">
+</head>
+
+<body>
+    <div class="app-wrap">
+        <header>
+            <input type="text" list="city-data-list" autocomplete="off" id="search-box" class="search-box" placeholder="Search for a city...">
+
+            <datalist id="city-data-list">
+
+            </datalist>
+
+        </header>
+        <main>
+            <section class="location">
+                <div class="city">Northampton, GB</div>
+                <div class="date">Thursday 10 january 2020</div>
+            </section>
+
+            <div class="current">
+                <div class="temp">15<span>°C</span></div>
+                <div class="weather">Sunny</div>
+                <div class="hi-low">13°C/16°C</div>
+                <div class="notFound">Area not Found</div>
+            </div>
+
+        </main>
+    </div>
+    <script src="main.js"></script>
+    <script type="module">
+        import { appendData } from './js/cities.js'; let searchBoxNode = document.getElementById('city-data-list'); appendData(searchBoxNode);
+    </script>
+
+</body>
+
+</html>
+<!-- <script src="main.js"> -->
+<!-- </script> -->
